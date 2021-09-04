@@ -1,0 +1,83 @@
+{% extends 'main.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-2 col-sm-2 col-lg-2 col-xl-2">
+        </div>
+        <div class="col col-8 col-sm-8 col-lg-8 col-xl-8">
+          
+          <form action="http://127.0.0.1:8000/patient/search/" method="post">
+            <h1 style="color: rgb(155, 26, 86) ; font-size: xx-large; font-style: initial;" >SEARCH </h1>
+
+          
+            <table class="table table-borderless">
+                
+                <tr>
+                    <td>Patient code</td>
+                    <td> <input name="patient_code" type="text" class="form-control"></td>
+                </tr>
+                
+                <tr>
+                    <td> </td>
+                    <td> <center><button class="btn btn-danger">Search</button> </center> </td>
+                </tr>
+            </table>
+        </form>
+
+            {% if data %}
+            <table class="table">
+                {% for i in data %}
+<tr>
+    <td>name</td>
+    <td>{{ i.name}}</td>
+</tr>
+<tr>
+    <td>Email </td>
+    <td>{{ i.email }}</td>
+</tr>
+
+<tr>
+    <td>Mobile no </td>
+    <td>{{ i.phone }}</td>
+</tr>
+<tr>
+    <td>Address</td>
+    <td>{{ i.address }}</td>
+</tr>
+<tr>
+    <td>Pincode</td>
+    <td>{{ i.pincode }}</td>
+</tr>
+<tr>
+    <td>patient code</td>
+    <td>{{ i.patient_code }}</td>
+</tr>
+<tr>
+    <td>username</td>
+    <td>{{ i.username }}</td>
+</tr>
+<tr>
+    <td>Password</td>
+    <td>{{ i.password }}</td>
+</tr>
+
+
+{% endfor %}
+
+            </table>
+
+{% endif %}
+
+
+
+        </div>
+
+
+        <div class="col col-2 col-sm-2 col-lg-2 col-xl-2">
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

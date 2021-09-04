@@ -1,0 +1,99 @@
+{% extends 'header.html' %}
+{% block myDic %}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-2 col-sm-2 col-lg-2 col-xl-2">
+        </div>
+        <div class="col col-8 col-sm-8 col-lg-8 col-xl-8">
+            <style>
+                body{
+                    background-image: linear-gradient(#D38312,yellow );
+                    height: 100vh;
+                  }
+                </style>
+          
+          <form action="http://127.0.0.1:8000/doctor/updateapi/" method="post">
+            <h1 style="color: rgb(18, 214, 34) ; font-size: xx-large; font-style: initial;" >UPDATE DETAILS</h1>
+
+          
+            <table class="table table-borderless">
+                
+                <tr>
+                    <td>Doctor code</td>
+                    <td> <input name="doctorcode" type="text" class="form-control"></td>
+                </tr>
+                
+                <tr>
+                    <td> </td>
+                    <td> <center><button class="btn btn-danger">Search</button> </center> </td>
+                </tr>
+            </table>
+        </form>
+
+        {% if data %}
+        
+
+<form action="http://127.0.0.1:8000/doctor/updatedata/" method="post">
+
+    <table class="table">
+        {% for i in data %}
+        <tr>
+            <td>ID</td>
+            <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+        </tr>
+
+    <tr>
+        <td>Name</td>
+        <td> <input name="newname"  value="{{i.name}}"type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td> <input name="newaddress" value="{{i.address}}"type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td> <input name="newemail"value="{{i.email}}" type="text" class="form-control"></td>
+
+        
+    </tr>
+    <tr>
+        <td>Moblie no</td>
+        <td> <input name="newphone"value="{{i.phone}}"type="text" class="form-control"></td>
+
+    </tr>
+    <tr>
+        <td>Specilization</td>
+        <td> <input name="newspecial" value="{{i.special}}" type="text" class="form-control"></td>
+
+    </tr>
+    <tr>
+        <td>Doctor code</td>
+        <td> <input name="newdoctorcode"value="{{i.doctorcode}}" type="text" class="form-control"></td>
+
+    </tr>
+    
+    
+<tr>
+    <td> 
+    <td> <center><button class="btn btn-primary">Update</button> </center> </td>
+</tr>
+</form>
+{% endfor %}
+
+            </table>
+
+{% endif %}
+
+        </div>
+
+
+        <div class="col col-2 col-sm-2 col-lg-2 col-xl-2">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

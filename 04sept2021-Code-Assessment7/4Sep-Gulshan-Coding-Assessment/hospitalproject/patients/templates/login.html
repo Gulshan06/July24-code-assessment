@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+{% block myContent %} 
+ 
+
+<style>
+body{
+    background:linear-gradient(#16A085,#F4D03F); 
+    height: 100vh; 
+}
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-lg-2 col-xl-2">
+        </div>
+        <div class="col col-12 col-sm-8 col-lg-8 col-xl-8">
+          
+          <form action="http://127.0.0.1:8000/patient/viewprofile" method="post">
+            <h1 style="color: rgb(155, 26, 86) ; font-size: xx-large; font-style: initial;" >Login</h1> </h1>
+            <table class="table table-borderless">
+                
+                <tr>
+                    <td>UserName</td>
+                    <td> <input  name="username" type="text" placeholder="Enter your user name" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td> <input  name="password" type="text" placeholder="Enter your password " class="form-control"></td>
+                </tr>
+                
+                <tr>
+                    <td> </td>
+                    <td> <center><button class="btn btn-danger">Login</button> </center> </td>
+                </tr>
+            </table>
+        </form>
+
+        
+     
+    </div>
+        <div class="col col-12 col-sm-2 col-lg-2 col-xl-2">
+
+        </div>
+</div>
+</div>
+
+
+
+{% endblock %}

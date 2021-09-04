@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+{% block myContent %}
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-4 col-lg-4 col-xl-4">
+            </div>
+            <div class="col col-12 col-sm-4 col-lg-4 col-xl-4">
+            <h1 style="color: blue ; font-size: xx-large; font-style: italic;" >ADD DETAILS</h1>
+
+
+            <form action="http://127.0.0.1:8000/patient/add/" method="POST">
+
+
+                <table class="table table-borderless">
+                    <tr>
+                        <td>Name</td>
+                        <td> <input name="name" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td> <input name="address" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td> <input name="email" type="text" class="form-control"></td>
+
+                        
+                    </tr>
+                    <tr>
+                        <td>Moblie number</td>
+                        <td> <input name="phone" type="text" class="form-control"></td>
+
+                    </tr>
+                    <tr>
+                        <td>patient code</td>
+                        <td> <input name="patient_code" type="text" class="form-control"></td>
+
+                    </tr>
+                    <tr>
+                        <td>pincode</td>
+                        <td> <input name="pincode" type="text" class="form-control"></td>
+
+                    </tr>
+                    <tr>
+                        <td>Username</td>
+                        <td> <input name="username" type="text" class="form-control"></td>
+
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td> <input name="password" type="text" class="form-control"></td>
+
+                    </tr>
+                   
+                    
+                    <tr>
+                        <td> </td>
+                        <td> <center><button class="btn btn-danger">Register</button> </center>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+
+
+            <div class="col col-12 col-sm-4 col-lg-4 col-xl-4">
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

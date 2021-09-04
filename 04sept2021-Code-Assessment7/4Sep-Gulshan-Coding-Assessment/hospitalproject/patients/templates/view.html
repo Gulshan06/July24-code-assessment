@@ -1,0 +1,62 @@
+{% extends 'main.html' %}
+{% block myContent %}
+
+<style>
+body{
+    /* background-image: url('/static/krupa.jpg'); */
+    background-image: linear-gradient(red,green);
+    height: 100vh;
+  }
+</style>
+    
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-lg-2 col-xl-2"></div>
+        <div class="col col-12 col-sm-8 col-lg-8 col-xl-8">
+
+            <h1 style="color: rgb(36, 25, 19) ; font-size: xx-large; font-style: inherit;" >VIEW DETAILS</h1>
+
+<table class="table table-striped">
+<thead class="table-dark">
+<tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>pincode</th>
+    <th>Patient code</th>
+    <th>Username</th>
+    <th>Password</th>
+    
+</tr>
+
+
+</thead>
+<tbody>
+    {% for i in data %}
+<tr>
+    <td>{{ i.name }}</td>
+    <td>{{ i.address }}</td>
+    <td>{{ i.email }}</td>
+    <td>{{ i.phone }}</td>
+    <td>{{ i.pincode }}</td>
+    <td>{{ i.patient_code }}</td>
+    <td>{{ i.username}}</td>
+    <td>{{ i.password}}</td>
+    
+   
+    
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+
+
+        </div>
+        <div class="col col-12 col-sm-2 col-lg-2 col-xl-2"></div>
+    </div>
+</div>
+   
+{% endblock %}
