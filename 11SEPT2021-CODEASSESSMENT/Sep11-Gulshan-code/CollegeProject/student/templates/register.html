@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+{% block content %}
+
+</head>
+<body>
+    <div style="font-size: medium; font-weight: 400; font-variant: inherit;" class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-lg-2 col-xl-2 col-xxl-2">
+            </div>
+            <div class="col col-12 col-sm-8 col-lg-8 col-xl-8 col-xxl-8">
+          
+              <form action="http://127.0.0.1:8000/Admin/cuslogincheck/" method="post">   {% csrf_token %}
+                <h1 style="color: yellowgreen ; font-size: xx-large; font-style: initial;" >Login</h1> </h1>
+                <table style="color: red;" class="table table-borderless">
+                    
+                    <tr>
+                        <td>UserName</td>
+                        <td> <input  name="username" type="text" placeholder="Enter your user name" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td> <input  name="password" type="text" placeholder="Enter your password " class="form-control"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td> </td>
+                        <td> <center><button class="btn btn-success">Login</button> </center> </td>
+                    </tr>
+                </table>
+            </form>
+
+            <h2 align="center">Student Registration</h2>
+            <div class="container">
+                <div class="row">
+                        <table class="table">
+                            fields=( "name", "address", "clas", "mob_num", "username", "password" ) 
+
+                            <tr>
+                                <td>NAME</td>
+                                <td><input name="name "  type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>ADDRESS</td>
+                                <td><input name="address " type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>CLASS</td>
+                                <td><inpu name="clas "  type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>MOB</td>
+                                <td><inpu name="mob_num "  type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>USERNAME</td>
+                                <td><inpu name=" username"  type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>PASSWORD</td>
+                                <td><inpu name="password"  type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><button class="btn btn-success">SUBMIT</button></td>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+        </div>
+
+                <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                </div>
+            
+
+
+</body>
+</html>
+
+{% endblock %}

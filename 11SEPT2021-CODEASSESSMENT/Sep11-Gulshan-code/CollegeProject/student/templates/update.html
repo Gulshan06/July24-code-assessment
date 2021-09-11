@@ -1,0 +1,72 @@
+{% extends 'header.html' %}
+
+{% block myContent %}
+
+<!-- <style>
+    body{
+        background-image: linear-gradient(blue,green);
+        height: 100vh;
+      }
+    </style> -->
+
+
+
+    <div class="container">
+        <div class="row">
+                <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+                <div class="col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <h1 style="color: darkgrey; font-size: large; font-style: initial;" >UPDATE</h1>
+ 
+
+
+{% if data %}    
+<form action="http://127.0.0.1:8000/student/updatedata/" method="post">
+   <table class="table table-borderless">
+       {% for i in data %}
+       fields=( "name", "address", "clas", "mob_num", "username", "password" ) 
+
+       <tr>
+           <td> </td>
+           <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+       </tr>
+
+       
+       <tr>
+           <td>address</td>
+           <td><input name="newaddress" value="{{i.address}}" type="text" class="form-control" ></td>
+       </tr>
+       <tr>
+        <td>clas</td>
+        <td><input name="newclas" value="{{i.clas}}" type="text" class="form-control" ></td>
+    </tr>
+    <tr>
+        <td>mob_num</td>
+        <td><input name="newmob_num" value="{{i.mob_num}}" type="text" class="form-control" ></td>
+    </tr>
+    <tr>
+        <td>username</td>
+        <td><input name="newusername" value="{{i.username}}" type="text" class="form-control" ></td>
+    </tr>
+    <tr>
+        <td>password</td>
+        <td><input name="newpassword" value="{{i.password}}" type="text" class="form-control" ></td>
+    </tr>
+       
+       <tr>
+           <td></td>
+           <td><button  type="submit" class="btn btn-danger">UPDATE</button></td>
+       </tr>
+</form>
+
+   {% endfor %}
+</table> 
+   {% endif %}
+
+
+</div>
+<div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+</div>
+</div>
+
+
+{% endblock %}
